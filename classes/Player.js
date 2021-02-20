@@ -19,7 +19,7 @@ var Player = function(){
 	}
 	
 	this.makeGame = function(genre){
-		
+		var randMoney = rand(1, 20)
 		if(typeof this.computer == "undefined"){
 			console.log('You need a computer')
 		}
@@ -28,7 +28,7 @@ var Player = function(){
 			
 			gameToMake.setGenre(genre);
 			this.games.push(gameToMake);
-			this.updateMoney(20);
+			this.updateMoney(randMoney);
 		}
 		
 	}
