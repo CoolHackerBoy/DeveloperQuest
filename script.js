@@ -51,5 +51,7 @@ $(document).on('click','button#createGame',function(){
 })
 
 $(document).on('click','button#exit',function(){
-	
+	$('div.mainUIContainer').hide();
+	$('div#mainUI').show();
+	$('button#exit').hide();
 })
