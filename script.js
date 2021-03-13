@@ -1,7 +1,6 @@
 var localPlayer = new Player();
 
 $(document).ready(function(){
-	$('div#mainUI').hide();
 	$('div#usernameContainer').hide();
 })
 
@@ -15,7 +14,6 @@ $(document).on('click','button#saveUsername',function(){
 	
 	localPlayer.setUsername(username)
 	$('div#usernameContainer').hide();
-	$('div#mainUI').show();
 })
 
 $(document).on('click','button#buyComputer',function(){
@@ -29,5 +27,5 @@ $(document).on('click','button#createGame',function(){
 })
 
 $(document).on('click','button#exit',function(){
-	window.location.href = 'index.php';
+	window.location.href = 'mainUI.php';
 })
