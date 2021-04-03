@@ -1,20 +1,14 @@
 var localPlayer = new Player();
 
 $(document).ready(function(){
-	$('div#usernameContainer').hide();
 })
 
-$(document). on('click','button#startGame',function(){
-	$('div#titalContainer').hide();
-	$('div#usernameContainer').show();
-})
-
-$(document).on('click','button#saveUsername',function(){
-	var username = $('input#username').val();
+// $(document).on('click','button#saveUsername',function(){
+	// var username = $('input#username').val();
 	
-	localPlayer.setUsername(username)
-	$('div#usernameContainer').hide();
-})
+	// localPlayer.setUsername(username)
+	// $('div#usernameContainer').hide();
+// })
 
 $(document).on('click','button#buyComputer',function(){
 	localPlayer.buyComputer();

@@ -1,3 +1,4 @@
+<h1>Developer Quest</h1>
 <h1>Register or Log in to get access!<h1>
 <form method="post" action="login_process.php">
 	<h2>Login</h2>
