@@ -1,4 +1,4 @@
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="helperfunction.js"></script>
 		<script type="text/javascript" src="classes/Computer.js"></script>
 		<script type="text/javascript" src="classes/Game.js"></script>

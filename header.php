@@ -8,16 +8,7 @@
 		if($_SERVER['SCRIPT_NAME'] == '/DeveloperQuest/index.php'){
 			header('Location: mainUI.php');
 		}
-		
 	}
 	
-	
+	include('header_html.php');
 ?>
-
-<! DOCTYPE HTML>
-<html>
-	<head>
-		<title>Developer Quest</title>
-		<link type="text/css" rel="stylesheet" href="style.css">
-	</head>
-<body>
