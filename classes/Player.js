@@ -1,7 +1,7 @@
 var Player = function(){
 	this.username = 'new player';
 	this.computer;
-	this.money = 100;
+	this.money = 0;
 	this.workers = 0;
 	this.games = [];
 	
@@ -35,7 +35,7 @@ var Player = function(){
 	
 	this.updateMoney = function(amount){
 		this.money = this.money +amount;
-		$('p#money').text(this.money);
+		$('p#money').text('$'+this.money);
 	}
 	
 	
