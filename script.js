@@ -1,6 +1,5 @@
-var money = 917;
 var localPlayer = new Player();
-localPlayer.updateMoney(money);
+localPlayer.updateMoney(session_vars.money);
 
 $(document).ready(function(){
 })

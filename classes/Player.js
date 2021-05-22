@@ -35,6 +35,7 @@ var Player = function(){
 	
 	this.updateMoney = function(amount){
 		this.money = this.money +amount;
+		
 		$('p#money').text('$'+this.money);
 	}
 	
