@@ -27,14 +27,34 @@
 			$finalAmount = $this->money + $amount;
 			
 			if ($finalAmount >= 0){
-				$select_stmt = 'UPDATE users SET money = '.$finalAmount.' WHERE user_id = "'.$this->user_id.'";';
-				mysqli_query($this->db_con, $select_stmt);
+				$update_stmt = 'UPDATE users SET money = '.$finalAmount.' WHERE user_id = "'.$this->user_id.'";';
+				mysqli_query($this->db_con, $update_stmt);
 				$this->money = $finalAmount;
+				
+				return true;
+			}
+			else{
+				return false;
+			}
+			
+		}
+		
+		public function buyComputer(){
+			$rating = 1;
+			
+			if ($this->updateMoney(-80) ){
+				$update_stmt = 'UPDATE computers SET rating = '.$rating.' WHERE user_id = "'.$this->user_id.'";';
+				mysqli_query($this->db_con, $update_stmt);
 			}
 			else{
 				echo "Insufficient funds";
 			}
-			
+		}
+		
+		public function createGame($genre){
+			$insert_stmt = 'INSERT INTO games (user_id, genre) VALUES ("'.$this->user_id.'", "'.$genre.'");';
+			mysqli_query($this->db_con, $insert_stmt);
+			$this->updateMoney(80);
 		}
 	}
 ?>

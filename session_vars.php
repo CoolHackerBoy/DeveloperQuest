@@ -1,5 +1,5 @@
 <?php
-	require_once('database_API.php');
+	require_once('Player.php');
 	$localPlayerData = new PlayerData($_SESSION['user_id']);
 ?>
 			
