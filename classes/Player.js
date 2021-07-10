@@ -30,7 +30,7 @@ var Player = function(){
 		// }
 		// else{
 			var gameToMake = new Game();
-			var postData = {action: 'makeGame'};
+			var postData = {action: 'makeGame', gameType: genre};
 			
 			$.post('ajax.php',postData,function(result){
 				console.log(result)

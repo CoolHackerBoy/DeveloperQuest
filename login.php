@@ -13,7 +13,7 @@
 <hr>
 <form method="post" action="register_process.php">
 	<h2>Create an Account</h2>
-	<input placeholder="username" type="text" name="new_user">
+	<input 	
 	<br>
 	<input placeholder="password" type="password" name="new_pw">
 	<br>

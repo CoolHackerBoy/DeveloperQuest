@@ -16,9 +16,9 @@ $(document).on('click','button#buyComputer',function(){
 })
 
 $(document).on('click','button#createGame',function(){
-	var createGame = $('input#game').val();
+	var setGenre = $('input#genre').val();
 	
-	localPlayer.makeGame(createGame)
+	localPlayer.makeGame(setGenre)
 })
 
 $(document).on('click','button#exit',function(){

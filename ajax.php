@@ -11,7 +11,7 @@
 		}
 		
 		if ($_POST['action'] == 'makeGame'){
-			$localPlayerData->createGame('Battle Royal');
+			$localPlayerData->createGame($_POST['gameType']);
 			
 			echo 'You made a game';
 		}
