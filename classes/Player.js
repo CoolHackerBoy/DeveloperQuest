@@ -35,6 +35,7 @@ var Player = function(){
 			$.post('ajax.php',postData,function(result){
 				console.log(result)
 			});
+			$('div#gameContainer').append('<div class="game">'+genre+'</div>');
 			gameToMake.setGenre(genre);
 			this.games.push(gameToMake);
 			this.updateMoney(randMoney);

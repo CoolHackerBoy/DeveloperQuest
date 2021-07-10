@@ -5,6 +5,7 @@
 		private $db_con;
 		private $user_id;
 		public $money;
+		public $games = 4;
 		
 		public function __construct($user_id){
 			$this->user_id = $user_id;

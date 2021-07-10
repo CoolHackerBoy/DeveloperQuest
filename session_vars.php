@@ -6,5 +6,6 @@
 <script>
 	var session_vars = {
 		money: <?php echo $localPlayerData->money; ?>
+		games: <?php echo $localPlayerData->games; ?>
 	};
 </script>

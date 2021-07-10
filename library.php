@@ -5,7 +5,7 @@
 <div id="libaryContainer" class="mainUIContainer">
 	<input id="genre" value="">
 	<button id="createGame">Create Game</button>
-	<div id="testGame">test game</div>
+	<div id="gameContainer"></div>
 </div>
 
 <?php include('footer.php')?>
