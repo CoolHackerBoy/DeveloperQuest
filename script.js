@@ -1,7 +1,8 @@
 var localPlayer = new Player();
-localPlayer.updateMoney(session_vars.money);
 
 $(document).ready(function(){
+	localPlayer.updateMoney(session_vars.money);
+	localPlayer.loadGames(session_vars.games);
 })
 
 // $(document).on('click','button#saveUsername',function(){

@@ -43,6 +43,13 @@ var Player = function(){
 		
 	}
 	
+	this.loadGames = function(games){
+		for(var c = 0; c<games.length; c++){
+			$('div#gameContainer').append('<div class="game">'+games[c].genre+'</div>');
+		}
+		
+	}
+	
 	this.updateMoney = function(amount){
 		this.money = this.money +amount;
 		
