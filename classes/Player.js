@@ -30,12 +30,13 @@ var Player = function(){
 		// }
 		// else{
 			var gameToMake = new Game();
+			gameToMake.setGenre(genre);
 			var postData = {action: 'makeGame', gameType: genre};
 			
 			$.post('ajax.php',postData,function(result){
 				console.log(result)
 			});
-			$('div#gameContainer').append('<div class="game">'+genre+'</div>');
+			this.appendGame(gameToMake);
 			gameToMake.setGenre(genre);
 			this.games.push(gameToMake);
 			this.updateMoney(randMoney);
@@ -45,9 +46,14 @@ var Player = function(){
 	
 	this.loadGames = function(games){
 		for(var c = 0; c<games.length; c++){
-			$('div#gameContainer').append('<div class="game">'+games[c].genre+'</div>');
+			this.appendGame(games[c]);
 		}
 		
+	}
+	
+	this.appendGame = function(game){
+		var game_id = game.game_id;
+		$('div#gameContainer').append('<a class="game" href="game_details.php?game_id='+game_id+'">'+game.genre+'</a>');
 	}
 	
 	this.updateMoney = function(amount){
