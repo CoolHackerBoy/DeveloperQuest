@@ -1,5 +1,5 @@
 <?php
-	require_once('Player.php');
+	require_once('classes/Player.php');
 	$localPlayerData = new PlayerData($_SESSION['user_id']);
 	
 ?>
