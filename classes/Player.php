@@ -1,7 +1,7 @@
 <?php
 	require_once('../show_php_errors.php');
 
-	class PlayerData{
+	class Player{
 		private $db_con;
 		private $user_id;
 		public $money;
@@ -10,7 +10,7 @@
 		
 		public function __construct($user_id){
 			$this->user_id = $user_id;
-			require_once('../db_con_developer_quest.php');
+			include('../db_con_developer_quest.php');
 			$this->db_con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 			$this->money = $this->fetchMoney();
 			$this->games = $this->fetchGames();

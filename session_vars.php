@@ -1,6 +1,6 @@
 <?php
 	require_once('classes/Player.php');
-	$localPlayerData = new PlayerData($_SESSION['user_id']);
+	$localPlayerData = new Player($_SESSION['user_id']);
 	
 ?>
 			

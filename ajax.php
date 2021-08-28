@@ -2,7 +2,7 @@
 	session_start();
 	if (!empty($_POST) ){
 		require_once('classes/Player.php');
-		$localPlayerData = new PlayerData($_SESSION['user_id']);
+		$localPlayerData = new Player($_SESSION['user_id']);
 		
 		if ($_POST['action'] == 'buyComputer'){
 			$localPlayerData->buyComputer();

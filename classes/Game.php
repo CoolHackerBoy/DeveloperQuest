@@ -5,9 +5,10 @@
 		public $user_id;
 		public $game_id;
 		public $genre;
+		private $db_con;
 		
 		public function __construct($url_param){
-			require_once('../db_con_developer_quest.php');
+			include('../db_con_developer_quest.php');
 			$this->db_con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 			$this->game_id = $url_param;
 			$this->fetchGame();
