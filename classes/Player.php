@@ -46,10 +46,11 @@
 			}
 		}
 		
-		public function createGame($genre){
-			$insert_stmt = 'INSERT INTO games (user_id, genre) VALUES ("'.$this->user_id.'", "'.$genre.'");';
-			mysqli_query($this->db_con, $insert_stmt);
+		public function createGame($param){
 			$this->updateMoney(80);
+			$game = new Game();
+			return $game->create($param);
+			
 		}
 		
 		public function fetchGames(){

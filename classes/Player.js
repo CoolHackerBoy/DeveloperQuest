@@ -22,24 +22,25 @@ var Player = function(){
 		
 	}
 	
-	this.makeGame = function(genre){
-		var randMoney = rand(1, 20);
+	this.makeGame = function(param){
 		
 		// if(typeof this.computer == "undefined"){
 			// console.log('You need a computer')
 		// }
 		// else{
-			var gameToMake = new Game();
-			gameToMake.setGenre(genre);
-			var postData = {action: 'makeGame', gameType: genre};
-			
-			$.post('ajax.php',postData,function(result){
-				console.log(result)
+
+			// gameToMake.setGenre(genre);
+			// var postData = {action: 'makeGame', gameType: genre};
+			param['action'] = 'makeGame';
+			var parentObj = this;
+			$.post('ajax.php',param,function(result){
+				param['game_id'] = result;
+				var gameToMake = new Game(param);
+				parentObj.appendGame(gameToMake);
+				parentObj.games.push(gameToMake);
+				parentObj.updateMoney(gameToMake.budget);
 			});
-			this.appendGame(gameToMake);
-			gameToMake.setGenre(genre);
-			this.games.push(gameToMake);
-			this.updateMoney(randMoney);
+			
 		// }
 		
 	}

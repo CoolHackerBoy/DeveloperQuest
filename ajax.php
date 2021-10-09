@@ -2,6 +2,7 @@
 	session_start();
 	if (!empty($_POST) ){
 		require_once('classes/Player.php');
+		require_once('classes/Game.php');
 		$localPlayerData = new Player($_SESSION['user_id']);
 		
 		if ($_POST['action'] == 'buyComputer'){
@@ -11,9 +12,8 @@
 		}
 		
 		if ($_POST['action'] == 'makeGame'){
-			$localPlayerData->createGame($_POST['gameType']);
-			
-			echo 'You made a game';
+			$game_id = $localPlayerData->createGame($_POST);
+			echo $game_id;
 		}
 	}
 	else{

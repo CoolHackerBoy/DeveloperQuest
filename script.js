@@ -18,8 +18,15 @@ $(document).on('click','button#buyComputer',function(){
 
 $(document).on('click','button#createGame',function(){
 	var setGenre = $('input#genre').val();
+	var param = {
+		user_id: 1, 
+		budget: 50, 
+		title: 'Survival', 
+		description: 'Survive on a island', 
+		platform: 'computer', 
+		genre: 'multiplayer'};
 	
-	localPlayer.makeGame(setGenre)
+	localPlayer.makeGame(param)
 })
 
 $(document).on('click','button#exit',function(){
