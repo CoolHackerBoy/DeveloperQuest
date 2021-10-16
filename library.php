@@ -3,8 +3,31 @@
 <button id="exit">Go Back</button>
 
 <div id="libaryContainer" class="mainUIContainer">
-	<input id="genre" value="">
-	<button id="createGame">Create Game</button>
+	<div id="createGameForm">
+		<label>Title</label>
+		<input type="text" id="title" value=""> 
+		
+		<label>Description</label>
+		<textarea id="description"></textarea>
+		
+		<label>Budget</label>
+		<input type="range" min=1 max=100 id="budget">
+		
+		<label>Genre</label>
+		<select id="genre">
+			<option value=""></option>
+			<option value="adventure">Adventure</option>
+			<option value="horror">Horror</option>
+		</select>
+		
+		<label>Platform</label>
+		<input type="checkbox" id="platform" value="computer" name="platform[]">Computer <br>
+		<input type="checkbox" id="platform" value="website" name="platform[]">Website <br>
+		<input type="checkbox" id="platform" value="mobile" name="platform[]">Mobile <br>
+		
+		
+		<button id="createGame">Create Game</button>
+	</div>
 	<div id="gameContainer"></div>
 </div>
 

@@ -17,13 +17,12 @@ $(document).on('click','button#buyComputer',function(){
 })
 
 $(document).on('click','button#createGame',function(){
-	var setGenre = $('input#genre').val();
 	var param = {
 		user_id: 1, 
-		budget: 50, 
-		title: 'Survival', 
-		description: 'Survive on a island', 
-		platform: 'computer', 
+		budget: $('input#budget').val(), 
+		title: $('input#title').val(), 
+		description: $('textarea#description').val(), 
+		platform: $('input#platform').val(), 
 		genre: 'multiplayer'};
 	
 	localPlayer.makeGame(param)
