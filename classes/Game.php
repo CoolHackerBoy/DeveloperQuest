@@ -20,13 +20,12 @@
 		
 		public function create($param){
 			$insert_stmt = "INSERT INTO `games` 
-			(`user_id`, `budget`, `title`, `description`, `platform`, `genre`) 
+			(`user_id`, `budget`, `title`, `description`, `genre`) 
 			VALUES 
 				('".$param['user_id']."', 
 				'".$param['budget']."', 
 				'".$param['title']."', 
 				'".$param['description']."', 
-				'".$param['platform']."', 
 				'".$param['genre']."')
 			;";
 			
@@ -46,7 +45,11 @@
 			
 			if ($result->num_rows ){
 				$game = mysqli_fetch_all($result, MYSQLI_ASSOC);
+				$this->title = $game[0]['title'];
+				$this->description = $game[0]['description'];
+				$this->budget = $game[0]['budget'];
 				$this->genre = $game[0]['genre'];
+				$this->platform = $game[0]['platform'];
 				$this->user_id = $game[0]['user_id'];
 				print_r($game);
 			}

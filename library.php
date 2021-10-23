@@ -21,9 +21,9 @@
 		</select>
 		
 		<label>Platform</label>
-		<input type="checkbox" id="platform" value="computer" name="platform[]">Computer <br>
-		<input type="checkbox" id="platform" value="website" name="platform[]">Website <br>
-		<input type="checkbox" id="platform" value="mobile" name="platform[]">Mobile <br>
+		<input type="checkbox" class="platform" value="computer" name="platform[]">Computer <br>
+		<input type="checkbox" class="platform" value="website" name="platform[]">Website <br>
+		<input type="checkbox" class="platform" value="mobile" name="platform[]">Mobile <br>
 		
 		
 		<button id="createGame">Create Game</button>

@@ -54,7 +54,7 @@ var Player = function(){
 	
 	this.appendGame = function(game){
 		var game_id = game.game_id;
-		$('div#gameContainer').append('<a class="game" href="game_details.php?game_id='+game_id+'">'+game.genre+'</a>');
+		$('div#gameContainer').append('<a class="game" href="game_details.php?game_id='+game_id+'">'+game.title+'</a>');
 	}
 	
 	this.updateMoney = function(amount){

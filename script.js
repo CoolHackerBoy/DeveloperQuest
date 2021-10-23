@@ -17,13 +17,20 @@ $(document).on('click','button#buyComputer',function(){
 })
 
 $(document).on('click','button#createGame',function(){
+	var fetchCheckbox = [];
+	 
+	$('input.platform:checked').each(function(i){
+		fetchCheckbox[i] = $(this).val();
+	});
+		  
 	var param = {
 		user_id: 1, 
 		budget: $('input#budget').val(), 
 		title: $('input#title').val(), 
 		description: $('textarea#description').val(), 
-		platform: $('input#platform').val(), 
-		genre: 'multiplayer'};
+		platform: fetchCheckbox, 
+		genre: $('select#genre').val()
+	};
 	
 	localPlayer.makeGame(param)
 })
